@@ -10,9 +10,16 @@ export const routes = {
 };
 
 export const fontSize = {
-  small: 12,
-  medium: 14,
-  large: 16,
+  xs: 12,
+  s: 14,
+  m: 16,
+  xm: 18,
+  l: 20,
+  xl: 22,
+  iconM: 30,
+  iconXM: 35,
+  iconS: 25,
+  iconL: 45,
 };
 
 export const colors = {
@@ -25,16 +32,12 @@ export const colors = {
 };
 
 export const padder = {
-  vertical: {
-    v1: (height * 1) / 100,
-    v2: (height * 3) / 100,
-    v3: (height * 5) / 100,
-  },
-  horizontal: {
-    h1: (width * 1) / 100,
-    h2: (width * 3) / 100,
-    h3: (width * 5) / 100,
-  },
+  xs: 1,
+  s: 3,
+  m: 5,
+  xm: 7,
+  l: 9,
+  xl: 11,
 };
 
 const baseUrl = `https://simple-contact-crud.herokuapp.com`;
