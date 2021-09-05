@@ -8,3 +8,10 @@ export const setContact = payload => {
     type: type.setContact,
   };
 };
+export const addContact = (prevState, newItem) => {
+  let payload = [...prevState, newItem];
+  return {
+    payload,
+    type: type.setContact,
+  };
+};

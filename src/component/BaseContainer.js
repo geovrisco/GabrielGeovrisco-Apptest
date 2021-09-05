@@ -25,6 +25,5 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: color,
     paddingTop: insets.top,
-    // paddingBottom: insets.bottom,
   }),
 });

@@ -23,7 +23,11 @@ export default function ContactCards({
   const fullName = `${item.firstName ? item.firstName : ''} ${
     item.lastName ? item.lastName : ''
   }`;
-  const imageSource = item.photo.replace('http', 'https');
+  let imageSource = item.photo;
+  if (!item.photo.includes('https')) {
+    imageSource = item.photo.replace('http', 'https');
+  }
+
   // ios doesn't allow http request anymore, so sad :'(
 
   return (
@@ -32,7 +36,11 @@ export default function ContactCards({
         style={[
           styles.Container,
           dataLength - 1 == index
-            ? {marginBottom: insets.bottom ? insets.bottom : 15}
+            ? {
+                marginBottom: insets.bottom
+                  ? insets.bottom + fontSize.iconXL + 35
+                  : fontSize.iconXL + 35,
+              }
             : '',
         ]}>
         <View style={styles.avatarContainer}>

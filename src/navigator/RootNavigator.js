@@ -2,7 +2,12 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {horizontalSlide, routes, verticalSlide} from '../utils/constants';
+import {
+  colors,
+  horizontalSlide,
+  routes,
+  verticalSlide,
+} from '../utils/constants';
 
 import ListScreen from '../screen/ListScreen';
 import DetailScreen from '../screen/DetailScreen';
@@ -22,12 +27,17 @@ export default function RootNavigator() {
         <Stack.Screen
           name={routes.detail}
           component={DetailScreen}
-          options={{cardStyleInterpolator: verticalSlide}}
+          options={{cardStyleInterpolator: horizontalSlide}}
         />
         <Stack.Screen
           name={routes.create}
           component={CreateScreen}
-          options={{cardStyleInterpolator: horizontalSlide}}
+          options={{
+            cardStyleInterpolator: verticalSlide,
+          }}
+          initialParams={{
+            edit: false,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

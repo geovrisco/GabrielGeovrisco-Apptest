@@ -20,6 +20,7 @@ export const fontSize = {
   iconXM: 35,
   iconS: 25,
   iconL: 45,
+  iconXL: 50,
 };
 
 export const colors = {
@@ -29,6 +30,7 @@ export const colors = {
   accentA: '#f78c2c',
   accentB: '#8fbf01',
   dark: '#4e4e4e',
+  lightShade: '#e1e3e1',
 };
 
 export const padder = {
@@ -43,6 +45,7 @@ export const padder = {
 const baseUrl = `https://simple-contact-crud.herokuapp.com`;
 export const URL = {
   contact: `${baseUrl}/contact`,
+  randomPic: 'https://picsum.photos/200',
 };
 
 export const verticalSlide = ({current, next, inverted, layouts: {screen}}) => {
