@@ -54,7 +54,7 @@ export default function DetailScreen({navigation, route}) {
       ],
     );
   };
-  console.log(detailData, 'detailData');
+
   let imageSource = detailData.photo;
   if (!detailData.photo.includes('https')) {
     imageSource = detailData.photo.replace('http', 'https');

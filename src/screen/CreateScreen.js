@@ -77,7 +77,10 @@ export default function CreateScreen({navigation, route}) {
 
   return (
     <BaseContainer backgroundColor={colors.primary} barStyle="light-content">
-      <Header onPress={goBack} />
+      <Header
+        onPress={goBack}
+        title={route.params.edit ? 'Edit Contact' : 'Create New Contact'}
+      />
       <KeyboardAvoidingView
         style={{flex: 1, alignItems: 'center'}}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
@@ -142,7 +145,7 @@ export default function CreateScreen({navigation, route}) {
                     backgroundColor={colors.primary}
                     outline={true}
                     outlineColor={colors.secondary}
-                    title="Clear Data"
+                    title={route.params.edit ? 'Restore Data' : 'Clear Data'}
                     onPress={resetForm}
                   />
                   <Button
